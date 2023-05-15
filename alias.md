@@ -29,17 +29,15 @@ tranche, gousse, boite, paquet, pièce...
 
 {% capture _code %}{% highlight json linenos %}
 {
-  $jsonSchema: {
-    required: [
-      'name'
-    ],
-    properties: {
-      name: {
-        bsonType: 'string',
-        description: 'must be a string and is required.'
-      }
+    "$jsonSchema": {
+        "required": ["name"],
+        "properties": {
+            "name": {
+                "bsonType": "string",
+                "description": "must be a string and is required."
+            }
+        }
     }
-  }
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
