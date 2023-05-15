@@ -75,9 +75,9 @@ private User $owner;
 USER
 {: .label .label-yellow }
 
-> Renvoie la liste de tous les `Supplier` qui existent en base de données accessibles à l'utilisateur authentifié.
+> Renvoie la liste de tous les `Supplier` qui existent en base de données & accessibles à l'utilisateur authentifié.
 
-> Pour plus d'informations à propos de l'authentification, lire la section [Security].
+> Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
 ### Requête
 
@@ -103,7 +103,7 @@ USER
     "id": "6460eb105983b6a7ad04f46b",
     "name": "Fournisseur 2",
     "owner": {
-        "email": "shop-manager@brand.cool"
+        "email": "shop1@brand.cool"
     }
 }]
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
@@ -135,7 +135,7 @@ USER
 {% capture _code %}{% highlight json linenos %}
 {
     "id": "6460eb105983b6a7ad04f46a",
-    "name": "sit",
+    "name": "Fournisseur",
     "owner": {
         "email": "manager@brand.cool"
     }
@@ -208,7 +208,7 @@ USER
 {% capture _code %}{% highlight json linenos %}
 {
     "id": "64621c61dbf19f8fae0dae43",
-    "name": "fournouveaufournisseurnisseur",
+    "name": "nouveaufournisseur",
     "owner": {
         "email": "shop1@brand.cool"
     }
@@ -241,6 +241,7 @@ User
 ### Réponse
 > HTTP - 204 - No Content
 <!-- FIN DE LA ROUTE -->
+
 ----
 
 [Sources]: /User/sources.md

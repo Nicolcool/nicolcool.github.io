@@ -221,6 +221,7 @@ ADMIN
 ### Réponse
 > HTTP - 204 - No Content
 <!-- FIN DE LA ROUTE -->
+
 ----
 
 [Units]: /User/units.md
