@@ -25,7 +25,7 @@ tranche, gousse, boite, paquet, pièce...
 ## Validation
 ----
 
-### Validation BDD
+### Base de données
 
 {% capture _code %}{% highlight json linenos %}
 "$jsonSchema": {
@@ -39,7 +39,7 @@ tranche, gousse, boite, paquet, pièce...
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-### Validation Serveur
+### Serveur
 
 {% capture _code %}{% highlight php linenos %}
 #[MongoDB\Id]
@@ -55,27 +55,24 @@ private string $name;
 
 # Routes
 
+1. [get-all]
+1. [get-one]
+1. [create-one]
+1. [update-one]
+1. [delete-one]
+
+## get-all
+
 {: .request }
 > **GET**
 >
 > A paragraph
 
-
-{% capture _code %}{% highlight php linenos %}
-public function setId(string $id): self{
-    $this->id = $id;
-    return $this;
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
-
-To `get started` with creating a site, just click "[use this template]"!
-
-If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
-
 ----
 
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
 [Units]: https://github.com/
+[get-all]: #routes
+[get-one]: #routes
+[create-one]: #routes
+[update-one]: #routes
+[delete-one]: #routes
