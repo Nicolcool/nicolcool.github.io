@@ -6,7 +6,7 @@ layout: default
 # Alias
 ----
 
-La table `Alias` stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. `Alias` doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
+> La table `Alias` stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. `Alias` doit être un (ou plusieurs) mot > simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
 
 
 {: .example }
@@ -63,22 +63,14 @@ private string $name;
 
 <!-- DÉBUT DE LA ROUTE -->
 ## get-all
+----
 PUBLIC
 {: .label .label-green }
-----
+
 > Renvoie la liste de tous les `Alias` qui existent en base de données.
 
 
 ### Requête
-
-{: .request-get }
-base_url/alias
-
-{: .request-get }
-> base_url/alias
-
-{: .request-get }
-> https://api.sharlotte.fr/alias
 
 {: .request-get }
 > https://api.sharlotte.fr/**alias**
@@ -102,7 +94,34 @@ base_url/alias
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
 <!-- DÉBUT DE LA ROUTE -->
+## get-one
+----
+PUBLIC
+{: .label .label-green }
 
+> Renvoie les informations d'un seul document `Alias` depuis son identifiant unique.
+
+
+### Requête
+
+{: .request-get }
+> https://api.sharlotte.fr/**alias/{{id}}**
+
+### Paramètres
+| Paramètre | Valeur                                           |
+|:----------|:-------------------------------------------------|
+| id        | identifiant unique du document `alias` recherché |
+
+### Body
+*Aucun contenu n'est nécessaire*
+
+### Réponse
+{% capture _code %}{% highlight json linenos %}
+{
+    "id": "6460eb105983b6a7ad04f46d",
+    "name": "tranche"
+}
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
 
 
