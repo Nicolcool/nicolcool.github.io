@@ -8,10 +8,12 @@ layout: default
 
 La table Alias stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. L'alias doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
 
+
 {: .example }
 tranche, gousse, boite, paquet, pièce...
 
-## Base de données
+
+## Structure
 ----
 
 | Champs | Description                | type     | Requis | Unique |
@@ -19,8 +21,11 @@ tranche, gousse, boite, paquet, pièce...
 | id     | identifiant unqiue MongoDB | objectId | Oui    | Oui    |
 | name   | Un mot simple et explicite | string   | Oui    | Oui    |
 
-### Validation BDD
+
+## Validation
 ----
+
+### Validation BDD
 
 {% capture _code %}{% highlight json linenos %}
 "$jsonSchema": {
@@ -35,7 +40,6 @@ tranche, gousse, boite, paquet, pièce...
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
 ### Validation Serveur
-----
 
 {% capture _code %}{% highlight php linenos %}
 #[MongoDB\Id]
@@ -48,7 +52,8 @@ private string $id;
 private string $name;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-## Routes
+
+# Routes
 
 {: .request }
 > **GET**
