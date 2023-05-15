@@ -16,11 +16,11 @@ METRO, TransGourmet, PromoCash...
 ## Structure
 ----
 
-| Champs | Description                            | Type     | Requis | Unique |
-|:-------|:---------------------------------------|:---------|:-------|:-------|
-| _id    | identifiant unique MongoDB             | objectId | Oui    | Oui    |
-| name   | Un mot simple et explicite             | string   | Oui    | Oui    |
-| owner  | L'utilisateur propriétaire du document | objectId | Oui    | Non    |
+| Champs | Description                                                          | Type     | Requis | Unique |
+|:-------|:---------------------------------------------------------------------|:---------|:-------|:-------|
+| _id    | identifiant unique MongoDB                                           | objectId | Oui    | Oui    |
+| name   | Un mot simple et explicite                                           | string   | Oui    | Oui    |
+| owner  | L'utilisateur propriétaire du document. Référence un document [User] | objectId | Oui    | Non    |
 
 
 ## Validation
@@ -73,7 +73,7 @@ private User $owner;
 USER
 {: .label .label-yellow }
 
-> Renvoie la liste de tous les `Supplier` qui existent en base de données & accessibles à l'utilisateur authentifié.
+> Renvoie la liste de tous les `Supplier` qui existent en base de données et qui sont accessibles à l'utilisateur authentifié.
 
 > Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
@@ -112,7 +112,9 @@ USER
 USER
 {: .label .label-yellow }
 
-> Renvoie les informations d'un seul document `Supplier` depuis son identifiant unique.
+> Renvoie les informations d'un seul document `Supplier` depuis son identifiant unique et dont l'utilisateur authentifié possède les droits d'accès.
+
+> Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
 
 ### Requête
@@ -146,7 +148,7 @@ USER
 USER
 {: .label .label-yellow }
 
-> Créer et ajoute un document `Supplier` à la base de données. Le nouveau document prend automatiquement l'utilisateur authentifié comme valeur du champs `owner`.
+> Créer et ajoute un document `Supplier` à la base de données.
 
 
 ### Requête
@@ -163,6 +165,9 @@ USER
     "name": "fournisseur"
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+
+{: .note }
+> Le champ `owner` est traité automatiquement par le serveur à partir de l'utilisateur authentifié.
 
 ### Réponse
 {% capture _code %}{% highlight json linenos %}
@@ -181,7 +186,9 @@ USER
 USER
 {: .label .label-yellow }
 
-> Modifie un document `Supplier` existant avec de nouvelles valeurs.
+> Modifie un document `Supplier` existant avec de nouvelles valeurs, à condition que l'utilisateur authentifié en possède les droits d'accès.
+
+> Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
 
 ### Requête
@@ -219,7 +226,9 @@ USER
 User
 {: .label .label-yellow }
 
-> Supprime un document `Supplier` existant de la base de données.
+> Supprime un document `Supplier` existant de la base de données, à condition que l'utilisateur en possède les droits d'accès.
+
+> Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
 
 ### Requête
@@ -242,8 +251,9 @@ User
 
 ----
 
-[Sources]: /User/sources.md
-[Security]: security.md
+[Sources]: /User/sources.html
+[User]: /User/index.html
+[Security]: security.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

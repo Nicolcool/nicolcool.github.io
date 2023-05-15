@@ -1,12 +1,12 @@
 ---
-title: Alias
+title: Units
 layout: default
 ---
 
 # Alias
 ----
 
-> La table `Alias` stocke en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. `Alias` doit être un (ou plusieurs) mot > simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette.
+> La table `Alias` stocke en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. `Alias` doit être un (ou plusieurs) mot > simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
 
 
 {: .example }
@@ -16,9 +16,9 @@ tranche, gousse, boite, paquet, pièce...
 ## Structure
 ----
 
-| Champs | Description                | Type     | Requis | Unique |
+| Champs | Description                | type     | Requis | Unique |
 |:-------|:---------------------------|:---------|:-------|:-------|
-| _id    | identifiant unique MongoDB | objectId | Oui    | Oui    |
+| id     | identifiant unique MongoDB | objectId | Oui    | Oui    |
 | name   | Un mot simple et explicite | string   | Oui    | Oui    |
 
 
@@ -28,14 +28,12 @@ tranche, gousse, boite, paquet, pièce...
 ### Base de données
 
 {% capture _code %}{% highlight json linenos %}
-{
-    "$jsonSchema": {
-        "required": ["name"],
-        "properties": {
-            "name": {
-                "bsonType": "string",
-                "description": "must be a string and is required."
-            }
+"$jsonSchema": {
+    "required": ["name"],
+    "properties": {
+        "name": {
+            "bsonType": "string",
+            "description": "must be a string and is required."
         }
     }
 }
@@ -219,7 +217,6 @@ ADMIN
 ### Réponse
 > HTTP - 204 - No Content
 <!-- FIN DE LA ROUTE -->
-
 ----
 
 [Units]: /User/units.md

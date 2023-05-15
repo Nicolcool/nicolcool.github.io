@@ -21,6 +21,9 @@ callouts:
   example:
     title: Exemples
     color: grey-dk
+  note:
+    title: Note
+    color: purple
   request-get:
     title: GET
     color: green
