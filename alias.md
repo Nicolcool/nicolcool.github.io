@@ -6,7 +6,7 @@ layout: default
 # Alias
 ----
 
-La table `Alias` stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. L'`alias` doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
+La table `Alias` stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. `Alias` doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
 
 
 {: .example }
@@ -62,15 +62,15 @@ private string $name;
 1. [delete-one]
 
 ## get-all
-Renvoie la liste de tous les `alias` qui existent en base de données.
-
-### Sécurité :
 PUBLIC
 {: .label .label-green }
 
+Renvoie la liste de tous les `Alias` qui existent en base de données.
+
+
 ### Requête
 {: .request-get }
-https://api.sharlotte.fr/alias
+{{ base_url }}/alias
 
 ### Paramètres
 *Aucun paramètre n'est nécessaire*
@@ -80,14 +80,14 @@ https://api.sharlotte.fr/alias
 
 ### Réponse
 {% capture _code %}{% highlight json linenos %}
-{
+[{
     "id": "6460eb105983b6a7ad04f46d",
     "name": "tranche"
 },
 {
     "id": "6460eb105983b6a7ad04f46e",
     "name": "boite"
-}
+}]
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
 
