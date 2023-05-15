@@ -108,6 +108,7 @@ PUBLIC
 > https://api.sharlotte.fr/alias/*_id*
 
 ### Paramètres
+
 | Paramètres | Valeurs                                          |
 |:-----------|:-------------------------------------------------|
 | *_id*      | identifiant unique du document `alias` recherché |
@@ -153,6 +154,63 @@ ADMIN
     "id": "64620c30dbf19f8fae0dae42",
     "name": "nouvelalias"
 }
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+<!-- FIN DE LA ROUTE -->
+<!-- DÉBUT DE LA ROUTE -->
+## update-one
+----
+ADMIN
+{: .label .label-red }
+
+> Modifie un document `Alias` existant avec de nouvelles valeurs.
+
+
+### Requête
+
+{: .request-put }
+> https://api.sharlotte.fr/admin/alias/*_id*
+
+### Paramètres
+*Aucun contenu n'est nécessaire*
+
+### Body
+{% capture _code %}{% highlight json linenos %}
+{
+    "name": "nouveaunom"
+}
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+
+### Réponse
+{% capture _code %}{% highlight json linenos %}
+{
+    "id": "64620c30dbf19f8fae0dae42",
+    "name": "nouveaunom"
+}
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+<!-- FIN DE LA ROUTE -->
+<!-- DÉBUT DE LA ROUTE -->
+## delete-one
+----
+ADMIN
+{: .label .label-red }
+
+> Supprime un document `Alias` existant de la base de données.
+
+
+### Requête
+
+{: .request-delete }
+> https://api.sharlotte.fr/admin/alias/*_id*
+
+### Paramètres
+*Aucun contenu n'est nécessaire*
+
+### Body
+*Aucun contenu n'est nécessaire*
+
+### Réponse
+{% capture _code %}{% highlight http linenos %}
+204 - No Content
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
 
