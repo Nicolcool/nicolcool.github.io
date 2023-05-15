@@ -20,8 +20,15 @@ Other than that, you're free to customize sites that you create with this templa
 >
 > A paragraph
 
-```php
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
 
+```php
 // PHP code with syntax highlighting.
 #[MongoDB\Field(type: 'string')]
 #[MongoDB\Index(unique: true)]
@@ -29,7 +36,6 @@ Other than that, you're free to customize sites that you create with this templa
 #[Assert\Type('string')]
 #[Groups(["getUserSources","getUserUnits","getIngredients","getUsersAdmin"])]
 private string $name;
-
 ```
 
 [Browse our documentation][Just the Docs] to learn more about how to use this theme.
