@@ -3,6 +3,8 @@ description: A starter template for a Jeykll site using the Just the Docs theme!
 remote_theme: just-the-docs/just-the-docs@v0.5.1
 logo: "/assets/images/logo.svg"
 enable_copy_code_button: true
+plugins:
+  - jekyll-default-layout
 
 url: https://just-the-docs.github.io
 
