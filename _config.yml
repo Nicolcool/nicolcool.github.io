@@ -19,7 +19,7 @@ callouts:
     title: Warning
     color: red
   example:
-  title: Exemple
+    title: Exemple
     color: yellow
   request:
     color: blue

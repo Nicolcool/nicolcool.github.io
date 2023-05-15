@@ -25,17 +25,6 @@ Other than that, you're free to customize sites that you create with this templa
 >
 > A paragraph
 
-{: .request }
-> GET
-{: .label }
->
-> A paragraph
-
-{: .request }
-GET
-{: .label }
->
-> A paragraph
 
 {% capture _code %}{% highlight php linenos %}
 public function setId(string $id): self{
