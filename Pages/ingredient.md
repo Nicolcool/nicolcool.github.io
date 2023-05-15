@@ -201,6 +201,14 @@ USER
 {: .request-get }
 > https://api.sharlotte.fr/ingredients
 
+{: .request-get }
+> https://api.sharlotte.fr/ingredients?page=1&limit=20
+> *renvoie les 20 premiers résultats*
+> https://api.sharlotte.fr/ingredients?page=2&limit=20
+> *renvoie les résultats 21 à 40*
+> https://api.sharlotte.fr/ingredients?search=jambon
+> *renvoie tout les résultats qui correspondent à la recherche, classés par ordre de correspondance*
+
 ### Paramètres
 
 | Paramètres | Valeurs                                           |
@@ -236,7 +244,8 @@ USER
     "privacy": "PRIVATE",
     "instructions": []
 },
-...]
+[...]
+]
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
 <!-- DÉBUT DE LA ROUTE -->
