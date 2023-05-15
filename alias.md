@@ -18,7 +18,7 @@ tranche, gousse, boite, paquet, pièce...
 
 | Champs | Description                | type     | Requis | Unique |
 |:-------|:---------------------------|:---------|:-------|:-------|
-| id     | identifiant unqiue MongoDB | objectId | Oui    | Oui    |
+| id     | identifiant unique MongoDB | objectId | Oui    | Oui    |
 | name   | Un mot simple et explicite | string   | Oui    | Oui    |
 
 
@@ -73,7 +73,7 @@ PUBLIC
 ### Requête
 
 {: .request-get }
-> https://api.sharlotte.fr/**alias**
+> https://api.sharlotte.fr/alias
 
 ### Paramètres
 *Aucun paramètre n'est nécessaire*
@@ -105,12 +105,12 @@ PUBLIC
 ### Requête
 
 {: .request-get }
-> https://api.sharlotte.fr/**alias/{{id}}**
+> https://api.sharlotte.fr/alias/*_id*
 
 ### Paramètres
 | Paramètre | Valeur                                           |
 |:----------|:-------------------------------------------------|
-| id        | identifiant unique du document `alias` recherché |
+| *_id*        | identifiant unique du document `alias` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
