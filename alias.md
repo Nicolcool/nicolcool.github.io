@@ -62,11 +62,12 @@ private string $name;
 1. [delete-one]
 
 ## get-all
+> Sécurité :
+> PUBLIC
+{: .label .label-green }
 
-{: .request }
-> **GET**
->
-> A paragraph
+{: .request-get }
+A paragraph
 
 ----
 

@@ -21,5 +21,15 @@ callouts:
   example:
     title: Exemples
     color: yellow
-  request:
+  request-get:
+    title: GET
+    color: green
+  request-post:
+    title: POST
+    color: yellow
+  request-put:
+    title: PUT
     color: blue
+  request-delete:
+    title: DELETE
+    color: red
