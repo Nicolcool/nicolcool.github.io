@@ -6,8 +6,8 @@ layout: default
 # Alias
 La table Alias stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. L'alias doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
 
-{: .highlight }
-exemple : tranche, gousse, boite, paquet, pièce...
+{: .example }
+tranche, gousse, boite, paquet, pièce...
 
 
 
@@ -20,8 +20,20 @@ More specifically, the created site:
 
 Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
 
-{: .note-title }
+{: .request }
+> *GET*
+>
+> A paragraph
+
+{: .request }
 > GET
+{: .label }
+>
+> A paragraph
+
+{: .request }
+GET
+{: .label }
 >
 > A paragraph
 
