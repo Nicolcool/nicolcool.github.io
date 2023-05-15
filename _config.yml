@@ -20,7 +20,7 @@ callouts:
     color: red
   example:
     title: Exemples
-    color: yellow
+    color: grey-dk
   request-get:
     title: GET
     color: green
