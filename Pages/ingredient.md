@@ -203,10 +203,15 @@ USER
 
 {: .request-get }
 > https://api.sharlotte.fr/ingredients?page=1&limit=20
+
 > *renvoie les 20 premiers résultats*
+
 > https://api.sharlotte.fr/ingredients?page=2&limit=20
+
 > *renvoie les résultats 21 à 40*
+
 > https://api.sharlotte.fr/ingredients?search=jambon
+
 > *renvoie tout les résultats qui correspondent à la recherche, classés par ordre de correspondance*
 
 ### Paramètres
