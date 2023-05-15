@@ -108,9 +108,9 @@ PUBLIC
 > https://api.sharlotte.fr/alias/*_id*
 
 ### Paramètres
-| Paramètre | Valeur                                           |
-|:----------|:-------------------------------------------------|
-| *_id*        | identifiant unique du document `alias` recherché |
+| Paramètres | Valeurs                                          |
+|:-----------|:-------------------------------------------------|
+| *_id*      | identifiant unique du document `alias` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
@@ -120,6 +120,38 @@ PUBLIC
 {
     "id": "6460eb105983b6a7ad04f46d",
     "name": "tranche"
+}
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+<!-- FIN DE LA ROUTE -->
+<!-- DÉBUT DE LA ROUTE -->
+## create-one
+----
+ADMIN
+{: .label .label-red }
+
+> Créer et ajoute un document `Alias` à la base de données.
+
+
+### Requête
+
+{: .request-post }
+> https://api.sharlotte.fr/admin/alias
+
+### Paramètres
+*Aucun contenu n'est nécessaire*
+
+### Body
+{% capture _code %}{% highlight json linenos %}
+{
+    "name": "nouvelalias"
+}
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+
+### Réponse
+{% capture _code %}{% highlight json linenos %}
+{
+    "id": "64620c30dbf19f8fae0dae42",
+    "name": "nouvelalias"
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
