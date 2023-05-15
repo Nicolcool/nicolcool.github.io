@@ -65,13 +65,23 @@ private string $name;
 ## get-all
 PUBLIC
 {: .label .label-green }
-
-Renvoie la liste de tous les `Alias` qui existent en base de données.
+----
+> Renvoie la liste de tous les `Alias` qui existent en base de données.
 
 
 ### Requête
+
 {: .request-get }
 base_url/alias
+
+{: .request-get }
+> base_url/alias
+
+{: .request-get }
+> https://api.sharlotte.fr/alias
+
+{: .request-get }
+> https://api.sharlotte.fr/**alias**
 
 ### Paramètres
 *Aucun paramètre n'est nécessaire*
