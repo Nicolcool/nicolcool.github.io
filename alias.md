@@ -4,12 +4,51 @@ layout: default
 ---
 
 # Alias
-La table Alias stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [`Units`]. L'alias doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
+----
+
+La table Alias stockent en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. L'alias doit être un (ou plusieurs) mot simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
 
 {: .example }
-tranche, gousse, boite, paquet, pièce...` 
+tranche, gousse, boite, paquet, pièce...
 
+## Base de données
+----
 
+| Champs | Description                | type     | Requis | Unique |
+|:-------|:---------------------------|:---------|:-------|:-------|
+| id     | identifiant unqiue MongoDB | objectId | Oui    | Oui    |
+| name   | Un mot simple et explicite | string   | Oui    | Oui    |
+
+### Validation BDD
+----
+
+{% capture _code %}{% highlight json linenos %}
+"$jsonSchema": {
+    "required": ["name"],
+    "properties": {
+        "name": {
+            "bsonType": "string",
+            "description": "must be a string and is required."
+        }
+    }
+}
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+
+### Validation Serveur
+----
+
+{% capture _code %}{% highlight php linenos %}
+#[MongoDB\Id]
+private string $id;
+
+#[MongoDB\Field(type: "string")]
+#[MongoDB\Index(unique: true)]
+#[Assert\NotBlank(message: "Name is required.")]
+#[Assert\Type('string')]
+private string $name;
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+
+## Routes
 
 {: .request }
 > **GET**
