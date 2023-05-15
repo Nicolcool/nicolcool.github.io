@@ -1,5 +1,5 @@
 ---
-title: Ingrédient
+title: Ingredient
 layout: default
 ---
 
@@ -40,6 +40,8 @@ layout: default
 ----
 
 ### Base de données
+
+Le champ `privacy` doit contenir une valeur qui doit forcément appartenir à la liste suivante : "PUBLIC", "PRIVATE", "FAMILY". Pour plus d'information sur les droits d'accès aux données, voir [Security].
 
 {% capture _code %}{% highlight json linenos %}
 {
@@ -115,13 +117,13 @@ private string $id;
 
 #[MongoDB\Field(type: 'string')]
 #[MongoDB\Index(unique: true)]
-#[Assert\NotBlank(message: "Name address is required.")]
+#[Assert\NotBlank(message: "Name is required.")]
 #[Assert\Type('string')]
 private string $name;
 
 #[MongoDB\Field(type: 'string')]
 #[MongoDB\Index(unique: true)]
-#[Assert\NotBlank(message: "Slug address is required.")]
+#[Assert\NotBlank(message: "Slug is required.")]
 #[Assert\Type('string')]
 private string $slug;
 
@@ -187,6 +189,7 @@ private $instructions;
 ----
 PUBLIC
 {: .label .label-green }
+
 USER
 {: .label .label-yellow }
 
@@ -241,6 +244,7 @@ USER
 ----
 PUBLIC
 {: .label .label-green }
+
 USER
 {: .label .label-yellow }
 
