@@ -21,6 +21,7 @@ Other than that, you're free to customize sites that you create with this templa
 > A paragraph
 
 ```php
+
 // PHP code with syntax highlighting.
 #[MongoDB\Field(type: 'string')]
 #[MongoDB\Index(unique: true)]
@@ -28,11 +29,12 @@ Other than that, you're free to customize sites that you create with this templa
 #[Assert\Type('string')]
 #[Groups(["getUserSources","getUserUnits","getIngredients","getUsersAdmin"])]
 private string $name;
+
 ```
 
 [Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
-To get started with creating a site, just click "[use this template]"!
+To `get started` with creating a site, just click "[use this template]"!
 
 If you want to maintain your docs in the `docs` directory of an existing project repo, see [Hosting your docs from an existing project repo](https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md#hosting-your-docs-from-an-existing-project-repo) in the template README.
 
