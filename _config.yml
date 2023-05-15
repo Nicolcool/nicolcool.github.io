@@ -13,3 +13,12 @@ kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  highlight:
+    color: yellow
+  request:
+    color: blue
