@@ -61,6 +61,7 @@ private string $name;
 1. [update-one]
 1. [delete-one]
 
+<!-- DÉBUT DE LA ROUTE -->
 ## get-all
 PUBLIC
 {: .label .label-green }
@@ -70,7 +71,7 @@ Renvoie la liste de tous les `Alias` qui existent en base de données.
 
 ### Requête
 {: .request-get }
-{{ base_url }}/alias
+base_url/alias
 
 ### Paramètres
 *Aucun paramètre n'est nécessaire*
@@ -89,6 +90,11 @@ Renvoie la liste de tous les `Alias` qui existent en base de données.
     "name": "boite"
 }]
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
+<!-- FIN DE LA ROUTE -->
+<!-- DÉBUT DE LA ROUTE -->
+
+<!-- FIN DE LA ROUTE -->
+
 
 
 
