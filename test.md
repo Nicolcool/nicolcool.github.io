@@ -20,23 +20,16 @@ Other than that, you're free to customize sites that you create with this templa
 >
 > A paragraph
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
+{% capture some_var %}
+{% highlight php linenos %}
+public function setId(string $id): self{
+    $this->id = $id;
+    return $this;
 }
-```
-
-```php
-// PHP code with syntax highlighting.
-#[MongoDB\Field(type: 'string')]
-#[MongoDB\Index(unique: true)]
-#[Assert\NotBlank(message: "Name address is required.")]
-#[Assert\Type('string')]
-#[Groups(["getUserSources","getUserUnits","getIngredients","getUsersAdmin"])]
-private string $name;
-```
+{% endhighlight %}
+{% endcapture %}
+{% assign some_var = some_var | markdownify %}
+{% include fix_linenos.html code=some_var %}
 
 [Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
