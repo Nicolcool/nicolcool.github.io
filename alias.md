@@ -203,14 +203,17 @@ ADMIN
 > https://api.sharlotte.fr/admin/alias/*_id*
 
 ### Paramètres
-*Aucun contenu n'est nécessaire*
+
+| Paramètres | Valeurs                                          |
+|:-----------|:-------------------------------------------------|
+| *_id*      | identifiant unique du document `alias` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
 
 ### Réponse
 {% capture _code %}{% highlight http linenos %}
-204 - No Content
+204 No Content
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
 
