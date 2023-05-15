@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: home
+layout: default
 ---
 
 OUI
@@ -20,16 +20,14 @@ Other than that, you're free to customize sites that you create with this templa
 >
 > A paragraph
 
-{% capture some_var %}
-{% highlight php linenos %}
+{% capture code %}{% highlight php linenos %}
 public function setId(string $id): self{
     $this->id = $id;
     return $this;
 }
-{% endhighlight %}
-{% endcapture %}
-{% assign some_var = some_var | markdownify %}
-{% include fix_linenos.html code=some_var %}
+{% endhighlight %}{% endcapture %}
+{% assign code = code | markdownify %}
+{% include fix_linenos.html code=code %}
 
 [Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
