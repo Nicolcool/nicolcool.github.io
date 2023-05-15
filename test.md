@@ -20,14 +20,14 @@ Other than that, you're free to customize sites that you create with this templa
 >
 > A paragraph
 
-{% capture code %}{% highlight php linenos %}
+{% capture codeblock %}{% highlight php linenos %}
 public function setId(string $id): self{
     $this->id = $id;
     return $this;
 }
 {% endhighlight %}{% endcapture %}
-{% assign code = code | markdownify %}
-{% include fix_linenos.html code=code %}
+{% assign codeblock = codeblock | markdownify %}
+{% include fixlinenos.html code=codeblock %}
 
 [Browse our documentation][Just the Docs] to learn more about how to use this theme.
 
