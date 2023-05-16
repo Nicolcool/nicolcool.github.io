@@ -251,9 +251,9 @@ User
 
 ----
 
-[Sources]: pages/user/sources.html
-[User]: pages/user/index.html
-[Security]: pages/security.html
+[Sources]: user/sources.html
+[User]: user/index.html
+[Security]: security.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

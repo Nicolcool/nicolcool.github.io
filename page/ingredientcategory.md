@@ -237,7 +237,7 @@ ADMIN
 
 ----
 
-[Ingredient]: pages/ingredient.html
+[Ingredient]: ingredient.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

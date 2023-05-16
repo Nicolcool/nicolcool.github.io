@@ -222,7 +222,7 @@ ADMIN
 
 ----
 
-[Units]: pages/user/units.html
+[Units]: user/units.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one
