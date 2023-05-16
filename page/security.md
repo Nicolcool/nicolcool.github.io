@@ -33,7 +33,7 @@ Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est acce
 
 Les utilisateurs sont stockés dans une table [User]. L'API de Sharlotte utilise le système JWT "JSON Web Token" pour gérer l'authentification des requêtes. Toutes les requêtes qui ne sont pas de type "Public" doivent envoyer un token d'authentification dans les headers avec le corps de la requête. Le token est composé du mot "Bearer" suivi d'un espace et du token en lui même. Il doit être associé à la clé "Authorization".
 
-{% capture _code %}{% highlight http linenos %}
+{% capture _code %}{% highlight json linenos %}
 Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODQxOTY1MjksImV4c...
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
@@ -71,6 +71,27 @@ PUBLIC
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
 
+## Droits d'accès
+----
+
+Parmis tous les documents de la base de données, certains possèdent des droits d'accès particuliers. Pour ceux là, les requêtes peuvent renvoyer des résultats différents en fonction de l'utilisateur qui les formule.
+
+Chaque utilisateur peut posséder l'un ou plusieurs de ces rôles :
+1. ROLE_ADMIN : Administrateur système
+1. ROLE_USER : Utilisateur lambda. Ce rôle est ajouté à tous les utilisateurs par defaut.
+1. ROLE_SHOP : Utilisateur lié à une boutique unique.
+1. ROLE_MANAGER-BRAND : Manager d'une entité marque.
+
+Les documents utilisateurs peuvent également posséder un champs `brandManager` et un champs `shopManager`. Voir [User].
+Cela créer ainsi une hierarchie à trois niveaux : des marques, des managers, des boutiques.
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 ----
 
