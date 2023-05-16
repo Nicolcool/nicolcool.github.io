@@ -18,7 +18,7 @@ Public
 {: .label .label-green }
 
 {: .note }
-Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est accessible depuis les deux niveaux de sécurité mais peux donner des résultats différents. Voir [Droits d'accès]
+Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est accessible depuis tous les niveaux de sécurité donnés mais peux donner des résultats différents. Voir [Droits d'accès]
 
 1. User : la requête doit être authentifiée pour être acceptée, peut-importe l'utilisateur qui la formule.
 1. Admin : la requête doit être authentifiée par un utilisateur administrateur pour être acceptée.
@@ -88,7 +88,7 @@ Chaque utilisateur peut posséder l'un ou plusieurs de ces rôles :
 
 Les documents utilisateurs peuvent également posséder un champs `brand` et un champs `manager`. Voir [User].
 
-Cela créer ainsi une hierarchie à trois niveaux : des brandManager, des shopManager et des shop. Par exemple :
+Par exemple :
 - BurgerRoi est une marque de fastfoods. Ils ont un compte unique avec un rôle `ROLE_BRAND` qui leur permet d'avoir une vue sur tout les comptes liés à leur marque. 
 - René ouvre un restaurant de la marque BurgerRoi, il dépend de la marque mais c'est lui qui gère son établissement. Il a un compte "renéshop@burgerroi.fr" avec un rôle `ROLE_SHOP` pour son restaurant. Son compte possède un champ `brand` qui référence le compte manager de BurgerRoi.
 - Après quelques temps, René ouvre un second restaurant. Des responsables s'occupent de ses établissements, ils ont chacuns un compte. "renéshop@burgerroi.fr" et "renéshop-2@burgerroi.fr". Les deux comptes possèdent un champ `brand` qui référence le compte manager de BurgerRoi.
@@ -100,6 +100,7 @@ graph TD;
     MANAGER-->Shop1;
     MANAGER-->Shop2;
 ```
+
 
 ```mermaid
 graph TD;
@@ -120,6 +121,7 @@ Certains documents possèdent un champs `privacy` qui permets de gérer son nive
 
 {: .example }
 > Le document "ABC" avec une `privacy` "FAMILY" d'une marque est accessible à son propriétaire ainsi qu'a tous les comptes "MANAGER" et "SHOP" qui référencent cette marque dans le champs `brand`.
+>
 > Le document "DEF" avec une `privacy` "FAMILY" d'un manager est accessible à son propriétaire ainsi qu'a tous les comptes "SHOP" qui référencent cet utilisateur dans le champs `manager`.
 
 {: .note }
@@ -133,13 +135,13 @@ Certains documents possèdent un champs `privacy` qui permets de gérer son nive
 
 La requête get-all permettant de récupérer la liste des ingrédients en base de données renvoie un résultat différent en fonction de l'auteur qui la formule.
 1. Anonyme : dans le cas d'une requête non authentifiée, la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données.
-1. Utilisateur "SHOP" : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de son manager et/ou de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
-1. Utilisateur "MANAGER" : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
-1. Utilisateur "BRAND" : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
+1. `ROLE_SHOP` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de son manager et/ou de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
+1. `ROLE_MANAGER` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
+1. `ROLE_BRAND` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
 
 ----
 
-[Droits d'accès]: #droits-d'accès
+[Droits d'accès]: #droits-daccès
 [User]: user/index.html
 [get-all]: #get-all
 [get-one]: #get-one
