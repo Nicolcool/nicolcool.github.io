@@ -8,6 +8,7 @@ parent: Ingredient
 <!-- DÉBUT DE LA ROUTE -->
 ## delete-one
 ----
+
 User
 {: .label .label-yellow }
 

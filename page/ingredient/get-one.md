@@ -8,6 +8,7 @@ parent: Ingredient
 <!-- DÉBUT DE LA ROUTE -->
 # get-one
 ----
+
 Public
 {: .label .label-green }
 
