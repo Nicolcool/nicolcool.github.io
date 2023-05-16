@@ -36,6 +36,7 @@ graph TD;
     MANAGER-->Shop2;
 ```
 
+----
 
 ```mermaid
 graph TD;
