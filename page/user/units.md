@@ -6,20 +6,31 @@ layout: default
 # Alias
 ----
 
-> La table `Alias` stocke en base de données la liste des noms pouvant être utilisés pour la création d'un document de type [Units]. `Alias` doit être un (ou plusieurs) mot > simple qui représente un conditionnement sous lequel on peut retrouver un ingrédient dans une recette
+> Le champs `units` du document [User] stocke la liste des unités personnalisée créées par l'utilisateur. L'unité utilisées dans tous les calculs est toujours le gramme, c'est la plus pratique et la plus précise pour le calcul des recettes, infos nutritionnelles etc. En revanche il peut arriver qu'une unité personnalisée soit plus pratique à l'usage. Dans ce cas l'utilisateur peut créer sa propre unité pour un ingrédient donné.
 
 
 {: .example }
-tranche, gousse, boite, paquet, pièce...
+L'ingrédient `Jambon blanc, cuit` est parfois exprimé au poids dans les recettes. Mais il peut arriver (par exemple avec des petites quantités) qu'il soit plus pratique de travailler en tranches.
+
+Un document `units` associe ensembles un [Ingredient], un [Alias] et une quantité.
 
 
 ## Structure
 ----
 
-| Champs | Description                | type     | Requis | Unique |
-|:-------|:---------------------------|:---------|:-------|:-------|
-| id     | identifiant unique MongoDB | objectId | Oui    | Oui    |
-| name   | Un mot simple et explicite | string   | Oui    | Oui    |
+| Champs     | Description                                                        | type     | Requis | Unique |
+|:-----------|:-------------------------------------------------------------------|:---------|:-------|:-------|
+| id         | identifiant unique MongoDB                                         | objectId | Oui    | Oui    |
+| ingredient | L'ingrédient ciblé par l'unité. Référence un document [Ingredient] | objectId | Oui    | Oui    |
+| alias      | L'alias associé à l'ingrédient. Référence un document [Alias]      | objectId | Oui    | Oui    |
+| value      | Une quantité exprimée en gramme                                    | double   | Oui    | Oui    |
+
+{: .example }
+| id                 | ingredient         | alias   | value |
+|:-------------------|:-------------------|:--------|:------|
+| identifiant unique | jambon blanc, cuit | tranche | 45    |
+
+> Ici on indique qu'une tranche de jambon pèse 45g. Dans une recette on pourra exprimé la quantité en nombre de tranches, quand c'est nécéssaire Sharlotte pourra la convertir en gramme pour traiter les données (calcul des infos nutritionnelles par exemple).
 
 
 ## Validation
@@ -219,7 +230,9 @@ ADMIN
 <!-- FIN DE LA ROUTE -->
 ----
 
-[Units]: /User/units.md
+[User]: index.md
+[Alias]: ../alias.md
+[Ingredient]: ../ingredient.md
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

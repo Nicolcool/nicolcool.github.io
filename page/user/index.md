@@ -337,7 +337,7 @@ Admin
 
 {: .note }
 > Les champs optionels peuvent être omis de la requête.
-> Le champs `password` est en clair dans la requête. Il est hashé par le serveur avant d'être insérer en base de données.
+> Le champs `password` est en clair dans la requête. Il est hashé par le serveur avant d'être inséré en base de données.
 
 ### Réponse
 {% capture _code %}{% highlight json linenos %}
@@ -429,9 +429,9 @@ Admin
 
 ----
 
-[brand]: security.html#rôles
-[manager]: security.html#rôles
-[roles]: security.html#rôles
+[brand]: ../security.html#rôles
+[manager]: ../security.html#rôles
+[roles]: ../security.html#rôles
 [labels]: user/labels.html
 [units]: user/units.html
 [sources]: user/sources.html
