@@ -2,6 +2,7 @@
 title: Units
 layout: default
 parent: User
+nav_order: 6
 ---
 
 # Units
