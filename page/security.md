@@ -1,6 +1,7 @@
 ---
 title: Security
 layout: default
+nav_order: 1
 ---
 
 # Sécurité
@@ -104,7 +105,7 @@ graph TD;
 
 ```mermaid
 graph TD;
-    BurgerRoi-->René:test detde;
+    BurgerRoi-->René;
     René-->Shop1;
     René-->Shop2;
 ```
