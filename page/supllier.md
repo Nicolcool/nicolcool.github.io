@@ -70,7 +70,7 @@ private User $owner;
 <!-- DÉBUT DE LA ROUTE -->
 ## get-all
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Renvoie la liste de tous les `Supplier` qui existent en base de données et qui sont accessibles à l'utilisateur authentifié.
@@ -109,7 +109,7 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## get-one
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Renvoie les informations d'un seul document `Supplier` depuis son identifiant unique et dont l'utilisateur authentifié possède les droits d'accès.
@@ -145,7 +145,7 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## create-one
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Créer et ajoute un document `Supplier` à la base de données.
@@ -183,7 +183,7 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## update-one
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Modifie un document `Supplier` existant avec de nouvelles valeurs, à condition que l'utilisateur authentifié en possède les droits d'accès.

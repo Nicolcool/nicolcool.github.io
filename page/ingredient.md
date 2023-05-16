@@ -187,10 +187,10 @@ private $instructions;
 <!-- DÉBUT DE LA ROUTE -->
 ## get-all
 ----
-PUBLIC
+Public
 {: .label .label-green }
 
-USER
+User
 {: .label .label-yellow }
 
 > Renvoie la liste de tous les `Ingredient` qui existent en base de données et qui sont réglés en confidentialité `PUBLIC`. Renvoie également tous les autres ingrédients accessibles à l'utilisateur authentifié.
@@ -258,10 +258,10 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## get-one
 ----
-PUBLIC
+Public
 {: .label .label-green }
 
-USER
+User
 {: .label .label-yellow }
 
 > Renvoie les informations d'un seul document `Ingredient` depuis son identifiant unique, à condition que l'utilisateur authentifié y ai les droits d'accès si l'ingrédient n'est pas réglé en confidentialité `PUBLIC`.
@@ -314,7 +314,7 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## create-one
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Créer et ajoute un document `Ingredient` à la base de données.
@@ -363,7 +363,7 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## update-one
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Modifie un document `Ingredient` existant avec de nouvelles valeurs, à condition que l'utilisateur authentifié en soit le propriétaire.
@@ -403,7 +403,7 @@ USER
 <!-- DÉBUT DE LA ROUTE -->
 ## delete-one
 ----
-USER
+User
 {: .label .label-yellow }
 
 > Supprime un document `Ingredient` existant de la base de données, à condition que l'utilisateur authentifié en soit le propriétaire.

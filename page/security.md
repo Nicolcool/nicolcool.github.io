@@ -6,11 +6,27 @@ layout: default
 # Authentification
 ----
 
-> C
+> Les différentes routes sont accessibles via 3 niveaux de sécurité différents. "USER", "ADMIN" ou "PUBLIC". Tout au long de la documentation, chaque route est annotée de l'étiquette de sécurité correspondante.
+
+User
+{: .label .label-yellow }
+
+Admin
+{: .label .label-yellow }
+
+Public
+{: .label .label-yellow }
+
+{: .note }
+Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est accessible depuis les deux niveaux de sécurité mais peux donner des résultats différents. Voir [Droits d'accès]
+
+1. User : la requête doit être authentifiée pour être acceptée, peut-importe l'utilisateur qui la formule.
+1. Admin : la requête doit être authentifiée par un utilisateur administrateur pour être acceptée.
+1. Public : la requête est accessible sans authentification.
+
+> De façon générale, lorsqu'une route est de type Admin, le chemin correspondant commence par "admin/"
 
 
-{: .example }
-tranche, gousse, boite, paquet, pièce...
 
 
 ## Structure
@@ -222,7 +238,7 @@ ADMIN
 
 ----
 
-[Units]: pages/user/units.html
+[Droits d'accès]: #droits-d'accès
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

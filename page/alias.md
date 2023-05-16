@@ -66,7 +66,7 @@ private string $name;
 <!-- DÉBUT DE LA ROUTE -->
 ## get-all
 ----
-PUBLIC
+Public
 {: .label .label-green }
 
 > Renvoie la liste de tous les `Alias` qui existent en base de données.
@@ -98,7 +98,7 @@ PUBLIC
 <!-- DÉBUT DE LA ROUTE -->
 ## get-one
 ----
-PUBLIC
+Public
 {: .label .label-green }
 
 > Renvoie les informations d'un seul document `Alias` depuis son identifiant unique.
@@ -129,7 +129,7 @@ PUBLIC
 <!-- DÉBUT DE LA ROUTE -->
 ## create-one
 ----
-ADMIN
+Admin
 {: .label .label-red }
 
 > Créer et ajoute un document `Alias` à la base de données.
@@ -161,7 +161,7 @@ ADMIN
 <!-- DÉBUT DE LA ROUTE -->
 ## update-one
 ----
-ADMIN
+Admin
 {: .label .label-red }
 
 > Modifie un document `Alias` existant avec de nouvelles valeurs.
@@ -196,7 +196,7 @@ ADMIN
 <!-- DÉBUT DE LA ROUTE -->
 ## delete-one
 ----
-ADMIN
+Admin
 {: .label .label-red }
 
 > Supprime un document `Alias` existant de la base de données.
