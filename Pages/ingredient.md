@@ -3,10 +3,10 @@ title: Ingredient
 layout: default
 ---
 
-# Ingrédient
+# Ingredient
 ----
 
-> La table `Ingrédient` stocke en base de données la liste des ingrédients existants. En opposition aux [Product], les ingrédients n'ont pas pour vocation à être vendus tel quel. Les ingrédients sont séparés en deux familles : les matières premières et les appareils. Les matières premières ne sont composées de rien d'autre que d'elles même. Les appareils sont des ingrédients qui sont nécéssaires à la composition des [Product], mais qui sont eux même composés de plusieurs ingrédients.
+> La table `Ingredient` stocke en base de données la liste des ingrédients existants. En opposition aux [Product], les ingrédients n'ont pas pour vocation à être vendus tel quel. Les ingrédients sont séparés en deux familles : les matières premières et les appareils. Les matières premières ne sont composées de rien d'autre que d'elles même. Les appareils sont des ingrédients qui sont nécéssaires à la composition des [Product], mais qui sont eux même composés de plusieurs ingrédients.
 
 
 {: .example }
@@ -193,7 +193,7 @@ PUBLIC
 USER
 {: .label .label-yellow }
 
-> Renvoie la liste de tous les `Ingrédient` qui existent en base de données et qui sont réglés en confidentialité `PUBLIC`. Renvoie également tous les autres ingrédients accessibles à l'utilisateur authentifié.
+> Renvoie la liste de tous les `Ingredient` qui existent en base de données et qui sont réglés en confidentialité `PUBLIC`. Renvoie également tous les autres ingrédients accessibles à l'utilisateur authentifié.
 
 
 ### Requête
@@ -264,7 +264,7 @@ PUBLIC
 USER
 {: .label .label-yellow }
 
-> Renvoie les informations d'un seul document `Ingrédient` depuis son identifiant unique, à condition que l'utilisateur authentifié y ai les droits d'accès si l'ingrédient n'est pas réglé en confidentialité `PUBLIC`.
+> Renvoie les informations d'un seul document `Ingredient` depuis son identifiant unique, à condition que l'utilisateur authentifié y ai les droits d'accès si l'ingrédient n'est pas réglé en confidentialité `PUBLIC`.
 
 
 ### Requête
@@ -276,7 +276,7 @@ USER
 
 | Paramètres | Valeurs                                               |
 |:-----------|:------------------------------------------------------|
-| *_id*      | identifiant unique du document `Ingrédient` recherché |
+| *_id*      | identifiant unique du document `Ingredient` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
@@ -317,7 +317,7 @@ USER
 USER
 {: .label .label-yellow }
 
-> Créer et ajoute un document `Ingrédient` à la base de données.
+> Créer et ajoute un document `Ingredient` à la base de données.
 
 
 ### Requête
@@ -366,7 +366,7 @@ USER
 USER
 {: .label .label-yellow }
 
-> Modifie un document `Ingrédient` existant avec de nouvelles valeurs, à condition que l'utilisateur authentifié en soit le propriétaire.
+> Modifie un document `Ingredient` existant avec de nouvelles valeurs, à condition que l'utilisateur authentifié en soit le propriétaire.
 
 > Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
@@ -380,7 +380,7 @@ USER
 
 | Paramètres | Valeurs                                               |
 |:-----------|:------------------------------------------------------|
-| *_id*      | identifiant unique du document `Ingrédient` recherché |
+| *_id*      | identifiant unique du document `Ingredient` recherché |
 
 ### Body
 {% capture _code %}{% highlight json linenos %}
@@ -406,7 +406,7 @@ USER
 USER
 {: .label .label-yellow }
 
-> Supprime un document `Ingrédient` existant de la base de données, à condition que l'utilisateur authentifié en soit le propriétaire.
+> Supprime un document `Ingredient` existant de la base de données, à condition que l'utilisateur authentifié en soit le propriétaire.
 
 > Pour plus d'informations à propos de l'authentification et des droits d'accès aux données : lire la section [Security].
 
@@ -419,7 +419,7 @@ USER
 
 | Paramètres | Valeurs                                               |
 |:-----------|:------------------------------------------------------|
-| *_id*      | identifiant unique du document `Ingrédient` recherché |
+| *_id*      | identifiant unique du document `Ingredient` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
@@ -430,10 +430,10 @@ USER
 
 ----
 
-[Product]: /User/produits.html
+[Product]: user/produit.html
 [IngredientCategory]: ingredientCategory.html
 [Security]: security.html
-[User]: /User/index.html
+[User]: user/index.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one
