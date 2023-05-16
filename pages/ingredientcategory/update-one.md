@@ -2,7 +2,7 @@
 title: update-one
 layout: default
 nav_order: 4
-parent: Alias
+parent: IngredientCategory
 ---
 
 Admin
@@ -12,31 +12,33 @@ Admin
 # update-one
 ----
 
-> Modifie un document `Alias` existant avec de nouvelles valeurs.
+> Modifie un document `IngredientCategory` existant avec de nouvelles valeurs.
 
 ## Requête
 
 {: .request-put }
-> https://api.sharlotte.fr/admin/alias/*_id*
+> https://api.sharlotte.fr/admin/ingredientcats/*_id*
 
 ## Paramètres
 
-| Paramètres | Valeurs                                          |
-|:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `Alias` recherché |
+| Paramètres | Valeurs                                                       |
+|:-----------|:--------------------------------------------------------------|
+| *_id*      | identifiant unique du document `IngredientCategory` recherché |
 
 ## Body
 {% capture _code %}{% highlight json linenos %}
 {
-    "name": "nouveaunom"
+    "name": "Nouveau nom",
+    "description":"Nouvelle description"
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
 ## Réponse
 {% capture _code %}{% highlight json linenos %}
 {
-    "id": "64620c30dbf19f8fae0dae42",
-    "name": "nouveaunom"
+    "id": "6462cc280d8c1c3efd0b43d2",
+    "name": "Nouveau nom",
+    "description":"Nouvelle description"
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
@@ -51,7 +53,7 @@ Admin
 
 ----
 
-[Units]: user/units.html
+[Ingredient]: ingredient.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

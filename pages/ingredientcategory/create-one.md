@@ -2,7 +2,7 @@
 title: create-one
 layout: default
 nav_order: 3
-parent: Alias
+parent: IngredientCategory
 ---
 
 Admin
@@ -12,12 +12,12 @@ Admin
 # create-one
 ----
 
-> Créer et ajoute un document `Alias` à la base de données.
+> Créer et ajoute un document `IngredientCategory` à la base de données.
 
 ## Requête
 
 {: .request-post }
-> https://api.sharlotte.fr/admin/alias
+> https://api.sharlotte.fr/admin/ingredientcats
 
 ## Paramètres
 *Aucun contenu n'est nécessaire*
@@ -25,15 +25,17 @@ Admin
 ## Body
 {% capture _code %}{% highlight json linenos %}
 {
-    "name": "nouvelalias"
+    "name":"Nouvelle catégorie",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
 ## Réponse
 {% capture _code %}{% highlight json linenos %}
 {
-    "id": "64620c30dbf19f8fae0dae42",
-    "name": "nouvelalias"
+    "id": "6462cc280d8c1c3efd0b43d2",
+    "name": "Nouvelle catégorie",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
@@ -48,7 +50,7 @@ Admin
 
 ----
 
-[Units]: user/units.html
+[Ingredient]: ingredient.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

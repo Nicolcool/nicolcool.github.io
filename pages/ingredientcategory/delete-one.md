@@ -2,7 +2,7 @@
 title: delete-one
 layout: default
 nav_order: 5
-parent: Alias
+parent: IngredientCategory
 ---
 
 Admin
@@ -12,18 +12,18 @@ Admin
 # delete-one
 ----
 
-> Supprime un document `Alias` existant de la base de données.
+> Supprime un document `IngredientCategory` existant de la base de données.
 
 ## Requête
 
 {: .request-delete }
-> https://api.sharlotte.fr/admin/alias/*_id*
+> https://api.sharlotte.fr/admin/ingredientcats/*_id*
 
 ## Paramètres
 
-| Paramètres | Valeurs                                          |
-|:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `Alias` recherché |
+| Paramètres | Valeurs                                                       |
+|:-----------|:--------------------------------------------------------------|
+| *_id*      | identifiant unique du document `IngredientCategory` recherché |
 
 ## Body
 *Aucun contenu n'est nécessaire*
@@ -31,7 +31,6 @@ Admin
 ## Réponse
 > HTTP - 204 - No Content
 <!-- FIN DE LA ROUTE -->
-
 # Routes
 
 1. [get-all]
@@ -42,7 +41,7 @@ Admin
 
 ----
 
-[Units]: user/units.html
+[Ingredient]: ingredient.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

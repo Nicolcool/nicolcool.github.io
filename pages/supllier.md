@@ -1,6 +1,7 @@
 ---
 title: Supplier
 layout: default
+has_children: true
 ---
 
 # Supplier

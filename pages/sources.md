@@ -1,8 +1,8 @@
 ---
 title: Sources
 layout: default
-parent: User
 nav_order: 7
+has_children: true
 ---
 
 # Sources
