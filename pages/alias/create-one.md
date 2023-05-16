@@ -47,10 +47,3 @@ Admin
 1. [delete-one]
 
 ----
-
-[Units]: user/units.html
-[get-all]: #get-all
-[get-one]: #get-one
-[create-one]: #create-one
-[update-one]: #update-one
-[delete-one]: #delete-one
