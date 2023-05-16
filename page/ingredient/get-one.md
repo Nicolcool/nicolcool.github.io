@@ -5,15 +5,15 @@ nav_order: 2
 parent: Ingredient
 ---
 
-<!-- DÉBUT DE LA ROUTE -->
-# get-one
-----
-
 Public
 {: .label .label-green }
 
 User
 {: .label .label-yellow }
+
+<!-- DÉBUT DE LA ROUTE -->
+# get-one
+----
 
 > Renvoie les informations d'un seul document `Ingredient` depuis son identifiant unique, à condition que l'utilisateur authentifié y ai les droits d'accès si l'ingrédient n'est pas réglé en confidentialité `PUBLIC`.
 

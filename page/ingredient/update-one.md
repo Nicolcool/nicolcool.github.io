@@ -5,12 +5,12 @@ nav_order: 4
 parent: Ingredient
 ---
 
+User
+{: .label .label-yellow }
+
 <!-- DÉBUT DE LA ROUTE -->
 ## update-one
 ----
-
-User
-{: .label .label-yellow }
 
 > Modifie un document `Ingredient` existant avec de nouvelles valeurs, à condition que l'utilisateur authentifié en soit le propriétaire.
 

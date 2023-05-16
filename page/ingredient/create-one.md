@@ -5,12 +5,12 @@ nav_order: 3
 parent: Ingredient
 ---
 
+User
+{: .label .label-yellow }
+
 <!-- DÉBUT DE LA ROUTE -->
 ## create-one
 ----
-
-User
-{: .label .label-yellow }
 
 > Créer et ajoute un document `Ingredient` à la base de données.
 

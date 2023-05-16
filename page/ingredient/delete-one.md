@@ -5,12 +5,12 @@ nav_order: 5
 parent: Ingredient
 ---
 
+User
+{: .label .label-yellow }
+
 <!-- DÉBUT DE LA ROUTE -->
 ## delete-one
 ----
-
-User
-{: .label .label-yellow }
 
 > Supprime un document `Ingredient` existant de la base de données, à condition que l'utilisateur authentifié en soit le propriétaire.
 
