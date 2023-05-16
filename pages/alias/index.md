@@ -56,14 +56,6 @@ private string $id;
 private string $name;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-# Routes
-
-1. [get-all]
-1. [get-one]
-1. [create-one]
-1. [update-one]
-1. [delete-one]
-
 ----
 
 [Units]: ../units/index.html

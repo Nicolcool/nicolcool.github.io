@@ -177,14 +177,6 @@ private string $privacy;
 private $instructions;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-# Routes
-
-1. [get-all]
-1. [get-one]
-1. [create-one]
-1. [update-one]
-1. [delete-one]
-
 ----
 
 [Product]: ../product/index.html

@@ -62,9 +62,6 @@ private string $id;
 private string $name;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-# Routes
-1. [get-user-all]
-
 ----
 
 [User]: ../user/index.html
