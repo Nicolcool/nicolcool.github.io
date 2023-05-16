@@ -5,15 +5,15 @@ nav_order: 1
 parent: Ingredient
 ---
 
-<!-- DÉBUT DE LA ROUTE -->
-# get-all
-----
-
 Public
 {: .label .label-green }
 
 User
 {: .label .label-yellow }
+
+<!-- DÉBUT DE LA ROUTE -->
+# get-all
+----
 
 > Renvoie la liste de tous les `Ingredient` qui existent en base de données et qui sont réglés en confidentialité `PUBLIC`. Renvoie également tous les autres ingrédients accessibles à l'utilisateur authentifié.
 
