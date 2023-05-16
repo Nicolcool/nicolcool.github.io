@@ -1,6 +1,7 @@
 ---
 title: Alias
 layout: default
+has_children: true
 ---
 
 # Alias
