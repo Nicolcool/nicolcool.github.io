@@ -11,6 +11,9 @@ Public
 User
 {: .label .label-yellow }
 
+Admin
+{: .label .label-red }
+
 <!-- DÉBUT DE LA ROUTE -->
 # get-all
 ----

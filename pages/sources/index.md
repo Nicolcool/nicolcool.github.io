@@ -10,7 +10,6 @@ has_children: true
 
 > Le champs `sources` du document [User] permets à l'utilisateur d'enregistrer en base de données différentes sources d'approvisionnement pour un ingrédient donné. Un document `sources` associe ensembles un [Ingredient] et un [Supplier] en y ajoutant des informations additionnelles comme un prix.
 
-
 ## Structure
 ----
 
@@ -27,7 +26,6 @@ Ci-dessous, on indique qu'une tranche de jambon pèse 45g. Dans une recette on p
 | id  | ingredient         | alias   | value |
 |:----|:-------------------|:--------|:------|
 | _id | jambon blanc, cuit | tranche | 45    |
-
 
 ## Validation
 ----
@@ -59,63 +57,9 @@ private string $id;
 private string $name;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-
 # Routes
 
 1. [get-user-all]
-
-<!-- DÉBUT DE LA ROUTE -->
-## get-user-all
-----
-PUBLIC
-{: .label .label-green }
-
-> Renvoie la liste de tous les `Units` qui existent en base de données pour l'utilisateur authentifié.
-
-
-### Requête
-
-{: .request-get }
-> https://api.sharlotte.fr/users/units
-
-### Paramètres
-*Aucun paramètre n'est nécessaire*
-
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-{
-    "units": [
-        {
-            "id": "6460eb105983b6a7ad04f495",
-            "ingredient": {
-                "id": "6460eb105983b6a7ad04f47a",
-                "name": "Jambon blanc, cuit"
-            },
-            "alias": {
-                "id": "6460eb105983b6a7ad04f46d",
-                "name": "tranche"
-            },
-            "value": 45
-        },
-        {
-            "id": "6460eb105983b6a7ad04f496",
-            "ingredient": {
-                "id": "6460eb105983b6a7ad04f47c",
-                "name": "Vanille"
-            },
-            "alias": {
-                "id": "6460eb105983b6a7ad04f46f",
-                "name": "gousse"
-            },
-            "value": 3
-        }
-    ]
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
 
 ----
 

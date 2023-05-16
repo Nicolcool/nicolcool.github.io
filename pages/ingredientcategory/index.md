@@ -10,10 +10,8 @@ has_children: true
 
 > La table `IngredientCategory` stocke en base de données la liste des catégories dans lesquelles les documents [Ingredient] peuvent être classés.
 
-
 {: .example }
 > Viandes, Poissons, Crèmerie, Fruits...
-
 
 ## Structure
 ----
@@ -23,7 +21,6 @@ has_children: true
 | _id         | identifiant unique MongoDB                                                                | objectId | Oui    | Oui    |
 | name        | Un mot simple et explicite                                                                | string   | Oui    | Oui    |
 | description | Une description courte de ce qui doit ou ne doit pas être catégorisé dans cette catégorie | string   | Oui    | Oui    |
-
 
 ## Validation
 ----
@@ -66,7 +63,6 @@ private string $name;
 private string $description;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-
 # Routes
 
 1. [get-all]
@@ -74,168 +70,6 @@ private string $description;
 1. [create-one]
 1. [update-one]
 1. [delete-one]
-
-<!-- DÉBUT DE LA ROUTE -->
-## get-all
-----
-Public
-{: .label .label-green }
-
-> Renvoie la liste de tous les `IngredientCategory` qui existent en base de données.
-
-
-### Requête
-
-{: .request-get }
-> https://api.sharlotte.fr/ingredientcats
-
-### Paramètres
-*Aucun contenu n'est nécessaire*
-
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-[{
-    "id": "6460eb105983b6a7ad04f467",
-    "name": "Viandes",
-    "description": "Eum et et minima soluta eos molestiae earum molestias. Illo velit veniam et unde placeat et dolorem reprehenderit."
-},
-{
-    "id": "6460eb105983b6a7ad04f468",
-    "name": "Fromages",
-    "description": "Doloremque quod qui neque consequatur. Nam facere sed reprehenderit exercitationem ut mollitia quo fugit. Fuga iste perferendis quod tenetur ut consequatur ut eos."
-}]
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## get-one
-----
-Public
-{: .label .label-green }
-
-> Renvoie les informations d'un seul document `IngredientCategory` depuis son identifiant unique.
-
-### Requête
-
-{: .request-get }
-> https://api.sharlotte.fr/ingredientcats/*_id*
-
-### Paramètres
-
-| Paramètres | Valeurs                                                       |
-|:-----------|:--------------------------------------------------------------|
-| *_id*      | identifiant unique du document `IngredientCategory` recherché |
-
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-{
-    "id": "6460eb105983b6a7ad04f467",
-    "name": "Viandes",
-    "description": "Eum et et minima soluta eos molestiae earum molestias. Illo velit veniam et unde placeat et dolorem reprehenderit."
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## create-one
-----
-Admin
-{: .label .label-red }
-
-> Créer et ajoute un document `IngredientCategory` à la base de données.
-
-
-### Requête
-
-{: .request-post }
-> https://api.sharlotte.fr/admin/ingredientcats
-
-### Paramètres
-*Aucun contenu n'est nécessaire*
-
-### Body
-{% capture _code %}{% highlight json linenos %}
-{
-    "name":"Nouvelle catégorie",
-    "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-{
-    "id": "6462cc280d8c1c3efd0b43d2",
-    "name": "Nouvelle catégorie",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## update-one
-----
-Admin
-{: .label .label-red }
-
-> Modifie un document `IngredientCategory` existant avec de nouvelles valeurs.
-
-
-### Requête
-
-{: .request-put }
-> https://api.sharlotte.fr/admin/ingredientcats/*_id*
-
-### Paramètres
-
-| Paramètres | Valeurs                                                       |
-|:-----------|:--------------------------------------------------------------|
-| *_id*      | identifiant unique du document `IngredientCategory` recherché |
-
-### Body
-{% capture _code %}{% highlight json linenos %}
-{
-    "name": "Nouveau nom",
-    "description":"Nouvelle description"
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-{
-    "id": "6462cc280d8c1c3efd0b43d2",
-    "name": "Nouveau nom",
-    "description":"Nouvelle description"
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## delete-one
-----
-Admin
-{: .label .label-red }
-
-> Supprime un document `IngredientCategory` existant de la base de données.
-
-### Requête
-
-{: .request-delete }
-> https://api.sharlotte.fr/admin/ingredientcats/*_id*
-
-### Paramètres
-
-| Paramètres | Valeurs                                                       |
-|:-----------|:--------------------------------------------------------------|
-| *_id*      | identifiant unique du document `IngredientCategory` recherché |
-
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
-> HTTP - 204 - No Content
-<!-- FIN DE LA ROUTE -->
 
 ----
 
