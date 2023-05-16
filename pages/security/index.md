@@ -28,6 +28,4 @@ Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est acce
 
 > De façon générale, lorsqu'une route est de type Admin, le chemin correspondant commence par "admin/"
 
-----
-
 [Droits d'accès]: ../security/access.html

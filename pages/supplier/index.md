@@ -58,8 +58,6 @@ private string $name;
 private User $owner;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-----
-
 [Sources]: ../sources/index.html
 [User]: ../user/index.html
 [get-all]: get-all.html

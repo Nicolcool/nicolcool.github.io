@@ -180,8 +180,6 @@ private $units;
 private $sources;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-----
-
 [units]: ../units/index.html
 [sources]: ../sources/index.html
 [actives]: ../actives/index.html

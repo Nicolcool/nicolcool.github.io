@@ -177,8 +177,6 @@ private string $privacy;
 private $instructions;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-----
-
 [Product]: ../product/index.html
 [IngredientCategory]: ../ingredientcategory/index.html
 [Security]: ../security/index.html

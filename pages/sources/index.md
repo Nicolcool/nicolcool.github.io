@@ -57,8 +57,6 @@ private string $id;
 private string $name;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-----
-
 [User]: ../user/index.html
 [Ingredient]: ../ingredient/index.html
 [Supplier]: ../supplier/index.html

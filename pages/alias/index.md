@@ -56,8 +56,6 @@ private string $id;
 private string $name;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-----
-
 [Units]: ../units/index.html
 [get-all]: get-all.html
 [get-one]: get-one.html

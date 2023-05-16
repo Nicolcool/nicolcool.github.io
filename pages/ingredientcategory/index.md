@@ -63,8 +63,6 @@ private string $name;
 private string $description;
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-----
-
 [Ingredient]: ../ingredient/index.html
 [get-all]: get-all.html
 [get-one]: get-one.html
