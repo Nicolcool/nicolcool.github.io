@@ -1,4 +1,5 @@
 title: Sharlotte API
+color_scheme: test
 description: A starter template for a Jeykll site using the Just the Docs theme!
 remote_theme: just-the-docs/just-the-docs@v0.5.1
 logo: "/assets/images/logo.svg"
