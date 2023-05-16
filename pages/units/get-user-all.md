@@ -2,7 +2,7 @@
 title: get-user-all
 layout: default
 parent: User
-parent: Units
+parent: User > Units
 nav_order: 1
 ---
 

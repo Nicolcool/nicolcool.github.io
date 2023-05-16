@@ -2,7 +2,7 @@
 title: get-user-all
 layout: default
 nav_order: 1
-parent: Sources
+parent: User > Sources
 ---
 
 PUBLIC
