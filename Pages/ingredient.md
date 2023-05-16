@@ -430,10 +430,10 @@ USER
 
 ----
 
-[Product]: user/produit.html
-[IngredientCategory]: ingredientCategory.html
-[Security]: security.html
-[User]: user/index.html
+[Product]: pages/user/produit.html
+[IngredientCategory]: pages/ingredientcategory.html
+[Security]: pages/security.html
+[User]: pages/user/index.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one

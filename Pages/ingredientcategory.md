@@ -10,7 +10,7 @@ layout: default
 
 
 {: .example }
-> Viande, poisson, crèmerie, fruits...
+> Viandes, Poissons, Crèmerie, Fruits...
 
 
 ## Structure
@@ -237,9 +237,7 @@ ADMIN
 
 ----
 
-[Ingredient]: ingredient.html
-[Security]: security.html
-[User]: user/index.html
+[Ingredient]: pages/ingredient.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one
