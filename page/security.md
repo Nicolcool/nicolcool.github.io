@@ -104,7 +104,7 @@ graph TD;
 
 ```mermaid
 graph TD;
-    BurgerRoi-->René;
+    BurgerRoi-->René:test detde;
     René-->Shop1;
     René-->Shop2;
 ```
@@ -134,10 +134,14 @@ Certains documents possèdent un champs `privacy` qui permets de gérer son nive
 > https://api.sharlotte.fr/ingredients
 
 La requête get-all permettant de récupérer la liste des ingrédients en base de données renvoie un résultat différent en fonction de l'auteur qui la formule.
-1. Anonyme : dans le cas d'une requête non authentifiée, la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données.
-1. `ROLE_SHOP` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de son manager et/ou de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
-1. `ROLE_MANAGER` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
-1. `ROLE_BRAND` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
+
+> Anonyme : dans le cas d'une requête non authentifiée, la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données.
+
+> `ROLE_SHOP` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de son manager et/ou de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
+
+> `ROLE_MANAGER` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédients de `privacy` "FAMILY" de sa `brand` + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
+
+> `ROLE_BRAND` : la réponse renvoie la liste des ingrédients de `privacy` "PUBLIC" dans la base de données + les ingrédient dont il est le propriétaire peut importe leur `privacy`.
 
 ----
 
