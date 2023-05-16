@@ -1,19 +1,13 @@
 ---
-title: Units
+title: Sourses
 layout: default
 parent: User
 ---
 
-# Units
+# Sourses
 ----
 
-> Le champs `units` du document [User] stocke la liste des unités personnalisée créées par l'utilisateur. L'unité utilisées dans tous les calculs est toujours le gramme, c'est la plus pratique et la plus précise pour le calcul des recettes, infos nutritionnelles etc. En revanche il peut arriver qu'une unité personnalisée soit plus pratique à l'usage. Dans ce cas l'utilisateur peut créer sa propre unité pour un ingrédient donné.
-
-
-{: .example }
-L'ingrédient `Jambon blanc, cuit` est parfois exprimé au poids dans les recettes. Mais il peut arriver (par exemple avec des petites quantités) qu'il soit plus pratique de travailler en tranches.
-
-Un document `units` associe ensembles un [Ingredient], un [Alias] et une quantité.
+> Le champs `sources` du document [User] permets à l'utilisateur d'enregistrer en base de données différentes sources d'approvisionnement pour un ingrédient donné. Un document `sources` associe ensembles un [Ingredient] et un [Supplier] en y ajoutant des informations additionnelles comme un prix.
 
 
 ## Structure
@@ -125,6 +119,6 @@ PUBLIC
 ----
 
 [User]: index.md
-[Alias]: ../alias.md
+[Supplier]: ../supplier.md
 [Ingredient]: ../ingredient.md
 [get-user-all]: #get-user-all
