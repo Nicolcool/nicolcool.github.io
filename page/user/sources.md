@@ -1,10 +1,10 @@
 ---
-title: Sourses
+title: Sources
 layout: default
 parent: User
 ---
 
-# Sourses
+# Sources
 ----
 
 > Le champs `sources` du document [User] permets à l'utilisateur d'enregistrer en base de données différentes sources d'approvisionnement pour un ingrédient donné. Un document `sources` associe ensembles un [Ingredient] et un [Supplier] en y ajoutant des informations additionnelles comme un prix.
