@@ -3,7 +3,7 @@ title: Security
 layout: default
 ---
 
-# Authentification
+# Sécurité
 ----
 
 > Les différentes routes sont accessibles via 3 niveaux de sécurité différents. "USER", "ADMIN" ou "PUBLIC". Tout au long de la documentation, chaque route est annotée de l'étiquette de sécurité correspondante.
@@ -12,10 +12,10 @@ User
 {: .label .label-yellow }
 
 Admin
-{: .label .label-yellow }
+{: .label .label-red }
 
 Public
-{: .label .label-yellow }
+{: .label .label-green }
 
 {: .note }
 Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est accessible depuis les deux niveaux de sécurité mais peux donner des résultats différents. Voir [Droits d'accès]
@@ -28,14 +28,14 @@ Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est acce
 
 
 
-
-## Structure
+## Authentification
 ----
 
-| Champs | Description                | Type     | Requis | Unique |
-|:-------|:---------------------------|:---------|:-------|:-------|
-| _id    | identifiant unique MongoDB | objectId | Oui    | Oui    |
-| name   | Un mot simple et explicite | string   | Oui    | Oui    |
+Les utilisateurs sont stockés dans une table [User]. L'API de Sharlotte utilise le système JWT "JSON Web Token" pour gérer l'authentification des requêtes. Toutes les requêtes qui ne sont pas de type "Public" doivent envoyer un token d'authentification dans les headers avec le corps de la requête. Le token est composé du mot "Bearer" suivi d'un espace et du token en lui même. Il doit être associé à la clé "Authorization".
+
+{% capture _code %}{% highlight http linenos %}
+Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODQxOTY1MjksImV4c...
+{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
 
 ## Validation
@@ -239,6 +239,7 @@ ADMIN
 ----
 
 [Droits d'accès]: #droits-d'accès
+[User]: user/index.html
 [get-all]: #get-all
 [get-one]: #get-one
 [create-one]: #create-one
