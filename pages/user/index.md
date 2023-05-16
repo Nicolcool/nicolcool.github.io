@@ -18,11 +18,11 @@ has_children: true
 |:---------|:---------------------------|:---------------------|:-------|:-------|
 | _id      | identifiant unique MongoDB | objectId             | Oui    | Oui    |
 | email    | Un mot simple et explicite | string               | Oui    | Oui    |
-| [brand]    | Un mot simple et explicite | objectId           | Non    | Non    |
-| [manager]  | Un mot simple et explicite | objectId           | Non    | Non    |
+| brand    | Un mot simple et explicite | objectId           | Non    | Non    |
+| manager  | Un mot simple et explicite | objectId           | Non    | Non    |
 | [roles]    | Un mot simple et explicite | array (of strings) | Oui    | Non    |
 | password | Un mot simple et explicite | string               | Oui    | Non    |
-| [labels]   | Un mot simple et explicite | array (of strings) | Non    | Non    |
+| labels   | Un mot simple et explicite | array (of strings) | Non    | Non    |
 | [units]    | Un mot simple et explicite | array (of objects) | Non    | Non    |
 | [sources]  | Un mot simple et explicite | array (of objects) | Non    | Non    |
 | [actives]  | Un mot simple et explicite | array (of strings) | Non    | Non    |
@@ -191,15 +191,12 @@ private $sources;
 
 ----
 
-[brand]: ../security.html#rôles
-[manager]: ../security.html#rôles
-[roles]: ../security.html#rôles
-[labels]: user/labels.html
-[units]: user/units.html
-[sources]: user/sources.html
-[actives]: user/actives.html
-[get-all]: #get-all
-[get-one]: #get-one
-[create-one]: #create-one
-[update-one]: #update-one
-[delete-one]: #delete-one
+[units]: ../units/index.html
+[sources]: ../sources/index.html
+[actives]: ../actives/index.html
+[roles]: ../security/access.html#rôles
+[get-all]: get-all.html
+[get-one]: get-one.html
+[create-one]: create-one.html
+[update-one]: update-one.html
+[delete-one]: delete-one.html

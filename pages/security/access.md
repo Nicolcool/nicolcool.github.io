@@ -81,10 +81,4 @@ La requête get-all permettant de récupérer la liste des ingrédients en base 
 
 ----
 
-[Droits d'accès]: #droits-daccès
-[User]: user/index.html
-[get-all]: #get-all
-[get-one]: #get-one
-[create-one]: #create-one
-[update-one]: #update-one
-[delete-one]: #delete-one
+[User]: ../user/index.html

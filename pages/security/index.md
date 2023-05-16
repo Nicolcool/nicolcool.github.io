@@ -31,10 +31,4 @@ Lorsqu'une route est annotée avec plusieurs étiquettes, c'est qu'elle est acce
 
 ----
 
-[Droits d'accès]: #droits-daccès
-[User]: user/index.html
-[get-all]: #get-all
-[get-one]: #get-one
-[create-one]: #create-one
-[update-one]: #update-one
-[delete-one]: #delete-one
+[Droits d'accès]: ../security/access.html

@@ -64,7 +64,4 @@ PUBLIC
 
 ----
 
-[User]: index.md
-[Supplier]: ../supplier.md
-[Ingredient]: ../ingredient.md
-[get-user-all]: #get-user-all
+[get-user-all]: get-user-all.html

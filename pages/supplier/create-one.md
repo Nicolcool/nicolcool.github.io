@@ -54,11 +54,8 @@ User
 
 ----
 
-[Sources]: user/sources.html
-[User]: user/index.html
-[Security]: security.html
-[get-all]: #get-all
-[get-one]: #get-one
-[create-one]: #create-one
-[update-one]: #update-one
-[delete-one]: #delete-one
+[get-all]: get-all.html
+[get-one]: get-one.html
+[create-one]: create-one.html
+[update-one]: update-one.html
+[delete-one]: delete-one.html

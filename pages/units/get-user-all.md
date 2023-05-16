@@ -65,7 +65,4 @@ PUBLIC
 
 ----
 
-[User]: index.md
-[Alias]: ../alias.md
-[Ingredient]: ../ingredient.md
-[get-user-all]: #get-user-all
+[get-user-all]: get-user-all.html

@@ -67,7 +67,7 @@ private string $name;
 
 ----
 
-[User]: index.md
-[Alias]: ../alias.md
-[Ingredient]: ../ingredient.md
-[get-user-all]: #get-user-all
+[User]: ../user/index.html
+[Ingredient]: ../ingredient/index.html
+[Alias]: ../alias/index.html
+[get-user-all]: get-user-all.html
