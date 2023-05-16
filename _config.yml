@@ -1,13 +1,13 @@
-title: Just the Docs Template
+title: Sharlotte API
 description: A starter template for a Jeykll site using the Just the Docs theme!
 remote_theme: just-the-docs/just-the-docs@v0.5.1
 logo: "/assets/images/logo.svg"
 enable_copy_code_button: true
 
-url: https://just-the-docs.github.io
+url: https://doc.sharlotte.fr/
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template  
+  Sharlotte: https://sharlotte.fr/ 
 
 kramdown:
   syntax_highlighter_opts:

@@ -113,7 +113,7 @@ Public
 
 | Paramètres | Valeurs                                          |
 |:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `alias` recherché |
+| *_id*      | identifiant unique du document `Alias` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
@@ -176,7 +176,7 @@ Admin
 
 | Paramètres | Valeurs                                          |
 |:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `alias` recherché |
+| *_id*      | identifiant unique du document `Alias` recherché |
 
 ### Body
 {% capture _code %}{% highlight json linenos %}
@@ -211,7 +211,7 @@ Admin
 
 | Paramètres | Valeurs                                          |
 |:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `alias` recherché |
+| *_id*      | identifiant unique du document `Alias` recherché |
 
 ### Body
 *Aucun contenu n'est nécessaire*
