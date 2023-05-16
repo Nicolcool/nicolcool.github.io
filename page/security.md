@@ -37,204 +37,40 @@ Les utilisateurs sont stockés dans une table [User]. L'API de Sharlotte utilise
 Authorization : Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODQxOTY1MjksImV4c...
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-
-## Validation
-----
-
-### Base de données
-
-{% capture _code %}{% highlight json linenos %}
-{
-    "$jsonSchema": {
-        "required": ["name"],
-        "properties": {
-            "name": {
-                "bsonType": "string",
-                "description": "must be a string and is required."
-            }
-        }
-    }
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-
-### Serveur
-
-{% capture _code %}{% highlight php linenos %}
-#[MongoDB\Id]
-private string $id;
-
-#[MongoDB\Field(type: "string")]
-#[MongoDB\Index(unique: true)]
-#[Assert\NotBlank(message: "Name is required.")]
-#[Assert\Type('string')]
-private string $name;
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-
-
-# Routes
-
-1. [get-all]
-1. [get-one]
-1. [create-one]
-1. [update-one]
-1. [delete-one]
-
 <!-- DÉBUT DE LA ROUTE -->
-## get-all
+### Obtention d'un token
 ----
+
 PUBLIC
 {: .label .label-green }
 
-> Renvoie la liste de tous les `Alias` qui existent en base de données.
+> Renvoie un token d'authentification valide
 
 
-### Requête
+#### Requête
 
 {: .request-get }
-> https://api.sharlotte.fr/alias
+> https://api.sharlotte.fr/login_check
 
-### Paramètres
+#### Paramètres
 *Aucun paramètre n'est nécessaire*
 
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-[{
-    "id": "6460eb105983b6a7ad04f46d",
-    "name": "tranche"
-},
-{
-    "id": "6460eb105983b6a7ad04f46e",
-    "name": "boite"
-}]
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## get-one
-----
-PUBLIC
-{: .label .label-green }
-
-> Renvoie les informations d'un seul document `Alias` depuis son identifiant unique.
-
-
-### Requête
-
-{: .request-get }
-> https://api.sharlotte.fr/alias/*_id*
-
-### Paramètres
-
-| Paramètres | Valeurs                                          |
-|:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `alias` recherché |
-
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
+#### Body
 {% capture _code %}{% highlight json linenos %}
 {
-    "id": "6460eb105983b6a7ad04f46d",
-    "name": "tranche"
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## create-one
-----
-ADMIN
-{: .label .label-red }
-
-> Créer et ajoute un document `Alias` à la base de données.
-
-
-### Requête
-
-{: .request-post }
-> https://api.sharlotte.fr/admin/alias
-
-### Paramètres
-*Aucun contenu n'est nécessaire*
-
-### Body
-{% capture _code %}{% highlight json linenos %}
-{
-    "name": "nouvelalias"
+    "username": "user@email.com",
+    "passsord": "strongpassword"
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 
-### Réponse
+#### Réponse
 {% capture _code %}{% highlight json linenos %}
 {
-    "id": "64620c30dbf19f8fae0dae42",
-    "name": "nouvelalias"
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2ODQxOTg3MTMsImV4cCI6MTY4NDIwMjMxMywicm9sZXMiOlsiUk9MRV9TSE9QIiwiUk9MRV9VU0VSIl0sInVzZXJuYW1lIjoic2hvcDFAYnJhbmQuY29vbCJ9.neNtT7ZDdmBvO3-mnA-PGyoDm0TX37kY7FkCauT4dKHEglhAQFN_h7fr-VBzAmnqivdok5B0LiTVyOL4esA8Isu03TUUylzD9Bkg6B0hdNEEypbSUpq_Zxctw3MpAXKCx-RXEc64yHg6xQTDqm4f31cMEkjoyFBDjvt1pv_Xc2CAsi-U5Ts4dUsmHGZRhgZXcehRF5MmF7oYSvvhDKNnGY5jkgwILqmr1zjJfgjwKSMgjkSA_N8fTS_DWFwKSuti3NZs7Jh0Kf002ggbC-2wTUPmsp3DPpn0hfT8RetOLOWka5MS051K5V2Mn_I7jTfqSx8w-0_4Mw-yEGeM_jFCGGlqqxio1vBx2yU7ZGN1bF-aahe2BPJ4WxGWwT9gx858De8lUfE_cm8LMhQdxp4jBzLXI__bh652xFbSqDlZZcW-DuyTBaiunC_iTqJTxMR_Xioqt1x8Rw77mixxUrsiCF7cQ9UJWaRQlTciczYoA1vco1GZm1XLXbKUPIoHdAVIQeC4RoGRYOUOfgETu13-mvUbrUVbBX51d9MgGzp-RR8JQ451Jwf4AynpWa1UiuY3417cloHmNtvgqs3JO4r4QA5WGQm10mcex1_fN9lqyGKYYhO87qCrgnTRtFlXbCgi9m-_Zxg7CF5CCX0FcQOpKFKyu3Nyaqjoo2-9unOKeOw"
 }
 {% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
 <!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## update-one
-----
-ADMIN
-{: .label .label-red }
 
-> Modifie un document `Alias` existant avec de nouvelles valeurs.
-
-
-### Requête
-
-{: .request-put }
-> https://api.sharlotte.fr/admin/alias/*_id*
-
-### Paramètres
-
-| Paramètres | Valeurs                                          |
-|:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `alias` recherché |
-
-### Body
-{% capture _code %}{% highlight json linenos %}
-{
-    "name": "nouveaunom"
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-
-### Réponse
-{% capture _code %}{% highlight json linenos %}
-{
-    "id": "64620c30dbf19f8fae0dae42",
-    "name": "nouveaunom"
-}
-{% endhighlight %}{% endcapture %}{% include fixlinenos.html %}{{ _code }}
-<!-- FIN DE LA ROUTE -->
-<!-- DÉBUT DE LA ROUTE -->
-## delete-one
-----
-ADMIN
-{: .label .label-red }
-
-> Supprime un document `Alias` existant de la base de données.
-
-
-### Requête
-
-{: .request-delete }
-> https://api.sharlotte.fr/admin/alias/*_id*
-
-### Paramètres
-
-| Paramètres | Valeurs                                          |
-|:-----------|:-------------------------------------------------|
-| *_id*      | identifiant unique du document `alias` recherché |
-
-### Body
-*Aucun contenu n'est nécessaire*
-
-### Réponse
-> HTTP - 204 - No Content
-<!-- FIN DE LA ROUTE -->
 
 ----
 
