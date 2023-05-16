@@ -47,3 +47,9 @@ Admin
 1. [delete-one]
 
 ----
+
+[get-all]: get-all.html
+[get-one]: get-one.html
+[create-one]: create-one.html
+[update-one]: update-one.html
+[delete-one]: delete-one.html
